@@ -2,5 +2,7 @@
 
 {% block content %}
 	<h1>Not ready yet</h1>
-	<h3>Our minions are working hard, be patient...</h3>
+	<p>Our minions are working hard, be patient...</p>
+	<p>Well, no, all our minions were fired. This is a desolated radioactive place.</p>
+	<p>Keep out!</p>
 {% endblock %}

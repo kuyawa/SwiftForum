@@ -27,7 +27,9 @@
 			</item>
 		</latest>
 		{% empty %}
-		<p>No posts in our forums yet. Working on the database...</p>
+		<p>No posts in our forums yet. Working on the database.</p>
+		<p>Database services too expensive. Abandoning project in 3, 2, 1...</p>
+		<p>[Last updated on Jan 6th 2017]</p>
 		{% endfor %}
 
 {% endblock %}
