@@ -1,5 +1,6 @@
 {% extends "base.stencil" %}
 
 {% block content %}
-	<h1>Not Ready Yet. Our minions are working hard, be patient...</h1>
+	<h1>Not ready yet</h1>
+	<h3>Our minions are working hard, be patient...</h3>
 {% endblock %}

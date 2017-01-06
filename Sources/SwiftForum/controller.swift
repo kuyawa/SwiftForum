@@ -28,9 +28,11 @@ public class Controller {
     router.all("/", middleware: StaticFileServer())
 
     // Router
-	router.get("/",      handler: IndexHandler().index)
+	router.get("/", handler: IndexHandler().index)
 	router.get("/index", handler: IndexHandler().index)
 	router.get("/forum/:forum", handler: TodoHandler().show)
+	router.get("/login", handler: TodoHandler().show)
+	router.get("/register", handler: TodoHandler().show)
 	router.get("/test",  handler: TestHandler().show)
   }
 
