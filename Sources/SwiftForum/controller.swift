@@ -30,6 +30,7 @@ public class Controller {
     // Router
 	router.get("/",      handler: IndexHandler().index)
 	router.get("/index", handler: IndexHandler().index)
+	router.get("/forum/:forum", handler: TodoHandler().show)
 	router.get("/test",  handler: TestHandler().show)
   }
 

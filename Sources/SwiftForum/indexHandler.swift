@@ -6,8 +6,7 @@ class IndexHandler {
 	func index(request: RouterRequest, response: RouterResponse, next: @escaping () -> Void) throws {
 		defer { next() }
 		HeliumLogger.use()
- 		print("GET - /index route handler...")
- 		Log.debug("?GET - /index route handler...")
+ 		print("GET/index - route handler...")
 
  		let info:[String:Any] = [
  			"forum": [

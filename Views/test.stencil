@@ -1,14 +1,8 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-	<title>Swift Forums</title>
-    <link rel="stylesheet" type="text/css" href="/styles/default-theme.css">
-</head>
-<body>
-	<h1>Hello test!</h1>
-	<h2>Test: {{ test }}</h2>
-	<h2>Test: {{ test | time }}</h2>
-	<h3>Back to <a href="/">index</a> &raquo;</h3>
-</body>
-</html>
+{% extends "base.stencil" %}
+
+{% block content %}
+	<h1>Test</h1>
+	<p>{{ test }}</p>
+	<p>{{ test|time }}</p>
+	<p>{{ test|plural }}</p>
+{% endblock %}
