@@ -7,7 +7,8 @@
 </head>
 <body>
 	<h1>Hello from Kitura!</h1>
-	<h2>Test: {{ test }}</h2>
-	<h2>Test: {{ test | time }}</h2>
+	<h2>Test1: {{ test }}</h2>
+	<h2>Test2: {{ test | time }}</h2>
+	<h3>Go to <a href="/test">test</a> &raquo;</h3>
 </body>
 </html>
