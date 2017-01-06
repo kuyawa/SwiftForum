@@ -1,7 +1,6 @@
 {% extends "base.stencil" %}
 
 {% block content %}
-
 		<h1 class="forum-name"><a href="/">{{ forum.name }}</a> <sep><small>•</small></sep> <span class="forum-descrip">{{ forum.descrip }}</span></h1>
 
 		{% for post in posts %}
@@ -10,9 +9,9 @@
 				{% if post.answered %}
 					 <img src="/images/answerok.png"/>
 				{% else %}
-					{% if post.type==0 %} <img src="/images/message.png"/>  {% endif %}
-					{% if post.type==1 %} <img src="/images/answerno.png"/> {% endif %}
-					{% if post.type==2 %} <img src="/images/answerno.png"/> {% endif %}
+					{% if post.type=="0" %} <img src="/images/message.png"/>  {% endif %}
+					{% if post.type=="1" %} <img src="/images/answerno.png"/> {% endif %}
+					{% if post.type=="2" %} <img src="/images/answerno.png"/> {% endif %}
 				{% endif %}
 			</icon>
 			<item>
@@ -27,7 +26,7 @@
 			</item>
 		</latest>
 		{% empty %}
-		<p>No posts in our forums yet. Working on the database...</p>
+		<p>No posts in our forums yet.</p>
 		{% endfor %}
 
 {% endblock %}

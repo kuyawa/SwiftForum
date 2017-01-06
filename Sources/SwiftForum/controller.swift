@@ -21,7 +21,7 @@ public class Controller {
     appEnv = try CloudFoundryEnv.getAppEnv()
 
     router = Router()
-	let stencil = StencilTemplateEngine(namespace: App.getStencilFilters())
+	let stencil = StencilTemplateEngine(namespace: App.addStencilFilters())
 	router.setDefault(templateEngine: stencil)
 
     // Static content from "public"

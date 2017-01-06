@@ -11,7 +11,8 @@ do {
 	print("Kitura starting...")
 
 	// HeliumLogger disables all buffering on stdout
-	HeliumLogger.use(LoggerMessageType.info)
+	//HeliumLogger.use(LoggerMessageType.info)
+	HeliumLogger.use()
 
 	let controller = try Controller()
 	Log.info("Server will be started on '\(controller.url)'.")

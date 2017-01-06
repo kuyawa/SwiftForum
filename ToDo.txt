@@ -1,5 +1,10 @@
 TODO:
 
-- Remove kitura-starter page
+- Learn about DB2 and Postgres on IBM
+- Start migrating forums from Vapor to Kitura
 - Learn Kitura
+
+------------------------------------------------------------
+
+x Remove kitura-starter page
 

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Sephora - Forums in Swift</title>
+    <link rel="stylesheet" type="text/css" href="/styles/forum.css">
+    {% block styles %}{% endblock %}
+</head>
+
+<body>
+
+<actionbar>
+  <wrap>
+	<actions>
+	{% if userInfo.isLogged %}
+		<a class="nick" href="https://github.com/{{ userInfo.nick }}">{{ userInfo.nick }} [0]</a>
+		<a href="/profile">Profile</a>
+		<a href="/logout">Log out</a>
+	{% else %}
+		<a href="/register">Register</a>
+		<a href="/login">Log In</a>
+	{% endif %}
+	</actions>
+  </wrap>
+</actionbar>
+
+<header>
+  <wrap>
+	<company>
+		<a href="/">
+			<img class="logo" src="/images/swiftlogo.png" width="80" height="80">
+			<h1>Sephora - Forums in Swift</h1>
+			<h3>Join Swift enthusiasts all around the world</h3>
+		</a>
+	</company>
+  </wrap>
+</header>
+
+<main>
+  <wrap>
+	<aside>
+		<h1><a href="/">Forums</a></h1>
+		<ul class="forums">
+		{% include "sidebar.stencil" %}
+		</ul>
+		<ul class="stats">
+			<li><stat>Users</stat> <statnum>{{ stats.users }}</statnum></li>
+			<li><stat>Threads</stat> <statnum>{{ stats.threads }}</statnum></li>
+			<li><stat>Replies</stat> <statnum>{{ stats.replies }}</statnum></li>
+			<li><stat>Questions</stat> <statnum>{{ stats.questions }}</statnum></li>
+			<li><stat>Answered</stat> <statnum>{{ stats.answered }}</statnum></li>
+		</ul>
+	</aside>
+
+	<section>
+		{% block content %}{% endblock %}
+	</section>
+  </wrap>
+</main>
+
+<footer>
+  <wrap>
+	<line><big>Forums by Sephora</big></line>
+	<line><small><a href="https://swift.org">Powered by Swift</a> ~ <a href="https://kitura.io">Built on Kitura</a></small></line>
+	<line><small><a href="https://bluemix.com">Hosted on Bluemix</a> ~ <a href="https://github.com/kuyawa/SwiftForum">Developed on Github</a></small></line>
+	<last>&copy; Armonia Software</last>
+  </wrap>
+</footer>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
