@@ -3,5 +3,5 @@ app:
   ports:
     - "8090:8090"
   volumes:
-    - .:/root/Kitura-Starter
-  command: bash -c "cd /root/Kitura-Starter && swift build --clean && swift build && ./.build/debug/Kitura-Starter"
+    - .:/root/SwiftForum
+  command: bash -c "cd /root/SwiftForum && swift build --clean && swift build && ./.build/debug/SwiftForum"

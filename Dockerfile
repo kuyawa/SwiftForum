@@ -14,23 +14,23 @@
 # limitations under the License.
 ##
 
-# Builds a Docker image with all the dependencies for compiling and running the Kitura-Starter sample application.
+# Builds a Docker image with all the dependencies for compiling and running the SwiftForum application.
 
 FROM ibmcom/swift-ubuntu:latest
 MAINTAINER IBM Swift Engineering at IBM Cloud
-LABEL Description="Docker image for building and running the Kitura-Starter sample application."
+LABEL Description="Docker image for building and running the SwiftForum application."
 
 # Expose default port for Kitura
 EXPOSE 8090
 
-RUN mkdir /root/Kitura-Starter
+RUN mkdir /root/SwiftForum
 
-ADD Sources /root/Kitura-Starter
-ADD Package.swift /root/Kitura-Starter
-ADD LICENSE /root/Kitura-Starter
-ADD .swift-version /root/Kitura-Starter
+ADD Sources /root/SwiftForum
+ADD Package.swift /root/SwiftForum
+ADD LICENSE /root/SwiftForum
+ADD .swift-version /root/SwiftForum
 
-RUN cd /root/Kitura-Starter && swift build
+RUN cd /root/SwiftForum && swift build
 
 USER root
-CMD ["/root/Kitura-Starter/.build/debug/Kitura-Starter"]
+CMD ["/root/SwiftForum/.build/debug/SwiftForum"]
