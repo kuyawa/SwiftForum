@@ -27,8 +27,8 @@ public class Controller {
     // Static content from "public"
     router.all("/", middleware: StaticFileServer())
 
-    // Routes
-	router.get("/", handler: IndexHandler().index)
+    // Router
+	router.get("/",      handler: IndexHandler().index)
 	router.get("/index", handler: IndexHandler().index)
 	router.get("/test",  handler: TestHandler().show)
   }

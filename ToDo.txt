@@ -1,4 +1,5 @@
 TODO:
 
+- Remove kitura-starter page
 - Learn Kitura
 
